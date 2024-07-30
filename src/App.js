@@ -7,7 +7,7 @@ const App = () => {
   const [location, setLocation] = useState('');
   const [weather, setWeather] = useState(null);
   const [error, setError] = useState(null);
-  const [unit, setUnit] = useState('metric'); // 'metric' for Celsius, 'imperial' for Fahrenheit
+  const [unit, setUnit] = useState('metric');
 
   const API_KEY = 'ba0ff2c8fbd73c5f996b7f9b34482703';
   const API_BASE_URL = 'https://api.openweathermap.org/data/2.5/weather';
