@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import axios from 'axios';
 import { TextField, Button, Typography, Container, Paper } from '@mui/material';
 import './App.css';
@@ -11,6 +11,11 @@ const App = () => {
 
   const API_KEY = 'ba0ff2c8fbd73c5f996b7f9b34482703';
   const API_BASE_URL = 'https://api.openweathermap.org/data/2.5/weather';
+  useEffect(() => {
+    if (weather) {
+      handleSearch();
+    }
+  }, [unit]);
 
   const handleSearch = async () => {
     try {
